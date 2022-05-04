@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    background: #1b1f29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card_1{
+    width: 370px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 100px;
+}
+.card_1 .card_inner{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.card_1 .front{
+    backface-visibility: hidden;
+    height: 500px;
+}
+.card_1 .front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card_1 .back{
+    backface-visibility: hidden;
+    background: #f66335;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotateY(180deg);
+}
+.card_1 .back h2{
+    font-size: 40px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.card_1 .back p{
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+.card_1 .social .icon{
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    background: #e43a00;
+    border-radius: 50%;
+    margin: 25px 6px; 
+    padding: 5px; 
+}
+.card_1 .btn{
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+    background: #fff;
+    padding: 10px 50px;
+    border-radius: 25px;
+    margin: 80px auto 0;
+}
+.card_1:hover .card_inner{
+    transform: rotateY(-180deg);
+}
+
+/**************** Card 2 ***********************/
+
+.card_2{
+    position: relative;
+    width: 370px;
+    height: 500px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    margin: 100px;
+}
+.card_2:hover{
+    transform: translateX(50%);
+}
+.card_2 .details{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.card_2 .details .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card_2 .details .content h2{
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+    font-size: 40px;
+}
+.card_2 .details .content h2 span{
+    color: #f66335;
+    font-size: 25px;
+    margin-top: 10px;
+}
+.card_2 .details .content .social_2{
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+}
+.card_2 .details .content .social_2 a{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      background: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin: 5px;
+      font-size: 18px;
+      transition: 0.2s;
+}
+.card_2 .details .content .social_2 a:hover{
+    background: #f66335;
+}
+.card_2 .details .content .social_2 .icon_2{
+    color: #fff;
+}
+.card_2 .boximg{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background:#000;
+    transition: 1s;
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.5);
+}
+.card_2:hover .boximg{
+    transform: rotateY(-180deg);
+}
+.card_2 .boximg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.card_2 .boximg img:nth-child(2){
+    transform: rotateY(180deg);
+}
+
+
+/****************** Card 3 ************************/
+
+
+.card_3{
+    width: 370px;
+    height: 500px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 100px;
+}
+.card_3 .card_inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    transition:transform 1s;
+    transform-style: preserve-3d;
+
+}
+.card_3 .card_inner .front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.card_3 .card_inner .front{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/leio-mclaren.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card_3 .card_inner .front span{
+    width: 100px;
+    padding: 14px 0;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    transition:transform 1s;
+}
+.card_3 .card_inner .back{
+    background: #1c1f54;
+    transform: rotateX(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card_3:hover .card_inner{
+     transform: rotateX(-180deg);
+}
+.card_3:hover .card_inner .front span{
+    transform: translateY(140px);
+}
+.card_3 .card_inner .back p{
+    display: inline-block;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+}
+.card_3 .card_inner .back .social{
+    margin-top: 10px;
+}
+.card_3 .card_inner .back .social .icon_3{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    color: #333;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 0.5s;
+}
+.card_3 .card_inner .back .social .icon_3:hover{
+    background: #f66335;
+    color: #fff;
+}
